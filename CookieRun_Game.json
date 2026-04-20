@@ -1,8 +1,8 @@
 {
-  "id": "cookie-run",
+  "id": "cookierun-braverse",
   "name": "CookieRun Braverse",
   "data": "./CookieRun_Data.json",
-  "coverPhoto": "https://balbi.github.io/TCGSim-CookieRun/images/misc/banner.png",
+  "coverPhoto": "https://balbi.github.io/TCGSim-CookieRun/images/misc/banner.webp",
   "icon": "https://placehold.co/256x256/f0b56a/3b2a1c?text=CR",
   "creatorName": "Balbi",
   "versionNumber": "0.1.0"
