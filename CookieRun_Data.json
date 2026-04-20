@@ -6,7 +6,11 @@
   "decks": null,
   "automation": "./CookieRun_Automation.json",
   "playmats": [
-    "https://placehold.co/1400x900/fdeacc/8a5d33?text=CookieRun"
+    "https://balbi.github.io/TCGSim-CookieRun/images/playmats/playmat1.png",
+    "https://balbi.github.io/TCGSim-CookieRun/images/playmats/playmat2.png",
+    "https://balbi.github.io/TCGSim-CookieRun/images/playmats/playmat3.png",
+    "https://balbi.github.io/TCGSim-CookieRun/images/playmats/playmat4.png",
+    "https://balbi.github.io/TCGSim-CookieRun/images/playmats/playmat5.png"
   ],
   "formats": [
     {
