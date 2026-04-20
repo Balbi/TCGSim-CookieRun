@@ -1,0 +1,10 @@
+{
+  "name": "tcgsim-cookierun",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "sync-cards": "node scripts/sync-cards.mjs",
+    "download-images": "node scripts/download-images.mjs"
+  }
+}

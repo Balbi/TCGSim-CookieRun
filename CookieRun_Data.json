@@ -1,0 +1,401 @@
+{
+  "cards": "./CookieRun_Cards.json",
+  "cardBack": "https://balbi.github.io/TCGSim-CookieRun/images/cards/card_back.png",
+  "cardBackColor": "#f0b56a",
+  "cardBackOverrides": null,
+  "decks": null,
+  "automation": "./CookieRun_Automation.json",
+  "playmats": [
+    "https://placehold.co/1400x900/fdeacc/8a5d33?text=CookieRun"
+  ],
+  "formats": [
+    {
+      "id": "standard",
+      "name": "Standard",
+      "rules": "core_rules",
+      "deckRules": "standard_deck",
+      "layout": "default_layout",
+      "automation": "standard"
+    }
+  ],
+  "rules": [
+    {
+      "id": "core_rules",
+      "gamePhases": [
+        {
+          "id": "active",
+          "name": "Active",
+          "interruptable": false,
+          "pause": false
+        },
+        {
+          "id": "draw",
+          "name": "Draw",
+          "interruptable": false,
+          "pause": false
+        },
+        {
+          "id": "support",
+          "name": "Support",
+          "interruptable": true,
+          "pause": false
+        },
+        {
+          "id": "main",
+          "name": "Main",
+          "interruptable": false,
+          "pause": true
+        },
+        {
+          "id": "end",
+          "name": "End",
+          "interruptable": true,
+          "pause": false
+        }
+      ],
+      "stackBehaviors": [
+        {
+          "cardType": "COOKIE",
+          "playTo": "cookie1",
+          "discardTo": "trash"
+        },
+        {
+          "cardType": "FLIP",
+          "playTo": "flip1",
+          "discardTo": "trash"
+        },
+        {
+          "cardType": "ITEM",
+          "playTo": "trash"
+        },
+        {
+          "cardType": "STAGE",
+          "playTo": "stage",
+          "discardTo": "trash"
+        },
+        {
+          "cardType": "TRAP",
+          "playTo": "trash"
+        }
+      ]
+    }
+  ],
+  "deckRules": [
+    {
+      "id": "standard_deck",
+      "name": "Standard",
+      "filterOptions": {
+        "Color": "multiple_select",
+        "EnergyType": "multiple_select",
+        "HP": "min_max_number",
+        "Level": "min_max_number",
+        "isFlip": "multiple_select"
+      },
+      "sections": [
+        {
+          "id": "main",
+          "title": "Main Deck",
+          "types": [
+            "COOKIE",
+            "FLIP",
+            "ITEM",
+            "TRAP",
+            "STAGE"
+          ],
+          "maxCopies": 4,
+          "minCount": 60,
+          "maxCount": 60,
+          "categories": [
+            {
+              "id": "cookie",
+              "title": "Cookies",
+              "allowedTypes": [
+                "COOKIE"
+              ],
+              "default": true,
+              "listLabel": "Cookies",
+              "listAliases": [
+                "Cookie"
+              ],
+              "listOrder": 10,
+              "minCount": 1
+            },
+            {
+              "id": "flip",
+              "title": "Flips",
+              "allowedTypes": [
+                "FLIP"
+              ],
+              "listLabel": "Flips",
+              "listAliases": [
+                "Flip"
+              ],
+              "listOrder": 20,
+              "minCount": 0,
+              "maxCount": 16
+            },
+            {
+              "id": "item",
+              "title": "Items",
+              "allowedTypes": [
+                "ITEM"
+              ],
+              "listLabel": "Items",
+              "listAliases": [
+                "Item"
+              ],
+              "listOrder": 30
+            },
+            {
+              "id": "trap",
+              "title": "Traps",
+              "allowedTypes": [
+                "TRAP"
+              ],
+              "listLabel": "Traps",
+              "listAliases": [
+                "Trap"
+              ],
+              "listOrder": 40
+            },
+            {
+              "id": "stage",
+              "title": "Stages",
+              "allowedTypes": [
+                "STAGE"
+              ],
+              "listLabel": "Stages",
+              "listAliases": [
+                "Stage"
+              ],
+              "listOrder": 50
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "deckText": {
+    "mode": "sectioned",
+    "entryStyle": "quantity_space_value",
+    "exportValue": "name",
+    "sectionHeaderSuffix": ":"
+  },
+  "layouts": [
+    {
+      "id": "default_layout",
+      "rows": [],
+      "columns": [
+        {
+          "id": "left",
+          "rows": [
+            {
+              "size": "MEDIUM",
+              "zones": [
+                {
+                  "id": "break",
+                  "type": "FIELD",
+                  "name": "Break",
+                  "cardsDirection": "column",
+                  "allowedCardTypes": [
+                    {
+                      "type": "COOKIE"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "center",
+          "rows": [
+            {
+              "size": "MEDIUM",
+              "justify": "space-around",
+              "zones": [
+                {
+                  "id": "cookie1",
+                  "type": "SINGLE",
+                  "name": "Cookie 1",
+                  "allowedCardTypes": [
+                    {
+                      "type": "COOKIE"
+                    }
+                  ]
+                },
+                {
+                  "id": "cookie2",
+                  "type": "SINGLE",
+                  "name": "Cookie 2",
+                  "allowedCardTypes": [
+                    {
+                      "type": "COOKIE"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "size": "MEDIUM",
+              "zones": [
+                {
+                  "id": "flip1",
+                  "type": "SINGLE",
+                  "name": "Flip 1",
+                  "justify": "center",
+                  "faceDownVisibleTo": "noone",
+                  "disablePreview": true,
+                  "allowedCardTypes": [
+                    {
+                      "type": "FLIP",
+                      "faceDown": true
+                    }
+                  ]
+                },
+                {
+                  "id": "flip2",
+                  "type": "SINGLE",
+                  "name": "Flip 2",
+                  "justify": "center",
+                  "faceDownVisibleTo": "noone",
+                  "disablePreview": true,
+                  "allowedCardTypes": [
+                    {
+                      "type": "FLIP",
+                      "faceDown": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "size": "MEDIUM",
+              "zones": [
+                {
+                  "id": "support",
+                  "type": "FIELD",
+                  "name": "Support",
+                  "expand": true,
+                  "cardsDirection": "column",
+                  "allowedCardTypes": [
+                    {
+                      "type": "ITEM"
+                    },
+                    {
+                      "type": "TRAP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "right",
+          "rows": [
+            {
+              "size": "MEDIUM",
+              "zones": [
+                {
+                  "id": "stage",
+                  "type": "SINGLE",
+                  "name": "Stage",
+                  "allowedCardTypes": [
+                    {
+                      "type": "STAGE"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "size": "MEDIUM",
+              "zones": [
+                {
+                  "id": "mainDeck",
+                  "type": "DECK",
+                  "drawTo": "break",
+                  "name": "Deck",
+                  "allowedCardTypes": [
+                    {
+                      "type": "COOKIE",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "FLIP",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "ITEM",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "STAGE",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "TRAP",
+                      "faceDown": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "size": "MEDIUM",
+              "zones": [
+                {
+                  "id": "trash",
+                  "type": "PILE",
+                  "name": "Trash",
+                  "allowedCardTypes": [
+                    {
+                      "type": "COOKIE"
+                    },
+                    {
+                      "type": "ITEM"
+                    },
+                    {
+                      "type": "STAGE"
+                    },
+                    {
+                      "type": "TRAP"
+                    },
+                    {
+                      "type": "FLIP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "reservedZones": [
+        {
+          "id": "hand",
+          "name": "Hand",
+          "expand": true,
+          "allowedCardTypes": [
+            {
+              "type": "COOKIE"
+            },
+            {
+              "type": "FLIP"
+            },
+            {
+              "type": "ITEM"
+            },
+            {
+              "type": "TRAP"
+            },
+            {
+              "type": "STAGE"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
