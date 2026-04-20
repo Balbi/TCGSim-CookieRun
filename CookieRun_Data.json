@@ -215,7 +215,7 @@
           "id": "center",
           "rows": [
             {
-              "size": "MEDIUM",
+              "size": "LARGE",
               "justify": "space-around",
               "zones": [
                 {
@@ -224,7 +224,27 @@
                   "name": "Cookie 1",
                   "allowedCardTypes": [
                     {
-                      "type": "COOKIE"
+                      "type": "COOKIE",
+                      "discardTo": "break"
+                    },
+                    {
+                      "type": "FLIP",
+                      "discardTo": "trash"
+                    },
+                    {
+                      "type": "ITEM",
+                      "playTo": "stack",
+                      "discardTo": "trash"
+                    },
+                    {
+                      "type": "TRAP",
+                      "playTo": "stack",
+                      "discardTo": "trash"
+                    },
+                    {
+                      "type": "STAGE",
+                      "playTo": "stage",
+                      "discardTo": "trash"
                     }
                   ]
                 },
@@ -234,93 +254,74 @@
                   "name": "Cookie 2",
                   "allowedCardTypes": [
                     {
-                      "type": "COOKIE"
+                      "type": "COOKIE",
+                      "discardTo": "break"
+                    },
+                    {
+                      "type": "FLIP",
+                      "discardTo": "trash"
+                    },
+                    {
+                      "type": "ITEM",
+                      "playTo": "stack",
+                      "discardTo": "trash"
+                    },
+                    {
+                      "type": "TRAP",
+                      "playTo": "stack",
+                      "discardTo": "trash"
+                    },
+                    {
+                      "type": "STAGE",
+                      "playTo": "stage",
+                      "discardTo": "trash"
                     }
                   ]
                 }
               ]
             },
             {
-              "size": "MEDIUM",
+              "size": "SMALL",
               "zones": [
                 {
                   "id": "flip1",
-                  "type": "SINGLE",
+                  "type": "FIELD",
                   "name": "Flip 1",
                   "justify": "center",
                   "faceDownVisibleTo": "noone",
                   "disablePreview": true,
+                  "expand": true,
                   "allowedCardTypes": [
                     {
+                      "type": "COOKIE",
+                      "faceDown": true
+                    },
+                    {
                       "type": "FLIP",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "ITEM",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "STAGE",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "TRAP",
                       "faceDown": true
                     }
                   ]
                 },
                 {
                   "id": "flip2",
-                  "type": "SINGLE",
+                  "type": "FIELD",
                   "name": "Flip 2",
                   "justify": "center",
                   "faceDownVisibleTo": "noone",
                   "disablePreview": true,
-                  "allowedCardTypes": [
-                    {
-                      "type": "FLIP",
-                      "faceDown": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "size": "MEDIUM",
-              "zones": [
-                {
-                  "id": "support",
-                  "type": "FIELD",
-                  "name": "Support",
                   "expand": true,
-                  "cardsDirection": "column",
-                  "allowedCardTypes": [
-                    {
-                      "type": "ITEM"
-                    },
-                    {
-                      "type": "TRAP"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "right",
-          "rows": [
-            {
-              "size": "MEDIUM",
-              "zones": [
-                {
-                  "id": "stage",
-                  "type": "SINGLE",
-                  "name": "Stage",
-                  "allowedCardTypes": [
-                    {
-                      "type": "STAGE"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "size": "MEDIUM",
-              "zones": [
-                {
-                  "id": "mainDeck",
-                  "type": "DECK",
-                  "drawTo": "break",
-                  "name": "Deck",
                   "allowedCardTypes": [
                     {
                       "type": "COOKIE",
@@ -347,6 +348,132 @@
               ]
             },
             {
+              "size": "SMALL",
+              "zones": [
+                {
+                  "id": "support",
+                  "type": "FIELD",
+                  "name": "Support",
+                  "expand": true,
+                  "cardsDirection": "row",
+                  "allowedCardTypes": [
+                    {
+                      "type": "COOKIE",
+                      "discardTo": "trash"
+                    },
+                    {
+                      "type": "FLIP",
+                      "discardTo": "trash"
+                    },
+                    {
+                      "type": "ITEM",
+                      "playTo": "stack",
+                      "discardTo": "trash"
+                    },
+                    {
+                      "type": "TRAP",
+                      "playTo": "stack",
+                      "discardTo": "trash"
+                    },
+                    {
+                      "type": "STAGE",
+                      "playTo": "stage",
+                      "discardTo": "trash"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "right",
+          "rows": [
+            {
+              "size": "MEDIUM",
+              "zones": [
+                {
+                  "id": "stage",
+                  "type": "SINGLE",
+                  "name": "Stage",
+                  "allowedCardTypes": [
+                    {
+                      "type": "COOKIE",
+                      "discardTo": "trash",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "FLIP",
+                      "discardTo": "trash",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "ITEM",
+                      "playTo": "stack",
+                      "discardTo": "trash",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "TRAP",
+                      "playTo": "stack",
+                      "discardTo": "trash",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "STAGE",
+                      "playTo": "stage",
+                      "discardTo": "trash",
+                      "faceDown": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "size": "MEDIUM",
+              "zones": [
+                {
+                  "id": "mainDeck",
+                  "type": "DECK",
+                  "drawTo": "hand",
+                  "name": "Deck",
+                  "disablePreview": true,
+                  "allowedCardTypes": [
+                    {
+                      "type": "COOKIE",
+                      "playTo": "stack",
+                      "discardTo": "trash",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "FLIP",
+                      "playTo": "stack",
+                      "discardTo": "trash",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "ITEM",
+                      "playTo": "stack",
+                      "discardTo": "trash",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "TRAP",
+                      "playTo": "stack",
+                      "discardTo": "trash",
+                      "faceDown": true
+                    },
+                    {
+                      "type": "STAGE",
+                      "playTo": "stage",
+                      "discardTo": "trash",
+                      "faceDown": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "size": "MEDIUM",
               "zones": [
                 {
@@ -355,19 +482,27 @@
                   "name": "Trash",
                   "allowedCardTypes": [
                     {
-                      "type": "COOKIE"
+                      "type": "COOKIE",
+                      "discardTo": "trash"
                     },
                     {
-                      "type": "ITEM"
+                      "type": "FLIP",
+                      "discardTo": "trash"
                     },
                     {
-                      "type": "STAGE"
+                      "type": "ITEM",
+                      "playTo": "stack",
+                      "discardTo": "trash"
                     },
                     {
-                      "type": "TRAP"
+                      "type": "TRAP",
+                      "playTo": "stack",
+                      "discardTo": "trash"
                     },
                     {
-                      "type": "FLIP"
+                      "type": "STAGE",
+                      "playTo": "stage",
+                      "discardTo": "trash"
                     }
                   ]
                 }
@@ -383,19 +518,27 @@
           "expand": true,
           "allowedCardTypes": [
             {
-              "type": "COOKIE"
+              "type": "COOKIE",
+              "discardTo": "trash"
             },
             {
-              "type": "FLIP"
+              "type": "FLIP",
+              "discardTo": "trash"
             },
             {
-              "type": "ITEM"
+              "type": "ITEM",
+              "playTo": "stack",
+              "discardTo": "trash"
             },
             {
-              "type": "TRAP"
+              "type": "TRAP",
+              "playTo": "stack",
+              "discardTo": "trash"
             },
             {
-              "type": "STAGE"
+              "type": "STAGE",
+              "playTo": "stage",
+              "discardTo": "trash"
             }
           ]
         }
