@@ -288,62 +288,52 @@
                   "type": "FIELD",
                   "name": "Flip 1",
                   "justify": "center",
-                  "faceDownVisibleTo": "noone",
                   "disablePreview": true,
                   "expand": true,
                   "allowedCardTypes": [
                     {
-                      "type": "COOKIE",
-                      "faceDown": true
+                      "type": "COOKIE"
                     },
                     {
-                      "type": "FLIP",
-                      "faceDown": true
+                      "type": "FLIP"
                     },
                     {
-                      "type": "ITEM",
-                      "faceDown": true
+                      "type": "ITEM"
                     },
                     {
-                      "type": "STAGE",
-                      "faceDown": true
+                      "type": "STAGE"
                     },
                     {
-                      "type": "TRAP",
-                      "faceDown": true
+                      "type": "TRAP"
                     }
-                  ]
+                  ],
+                  "visibility": "noone"
                 },
                 {
                   "id": "flip2",
                   "type": "FIELD",
                   "name": "Flip 2",
                   "justify": "center",
-                  "faceDownVisibleTo": "noone",
                   "disablePreview": true,
                   "expand": true,
                   "allowedCardTypes": [
                     {
-                      "type": "COOKIE",
-                      "faceDown": true
+                      "type": "COOKIE"
                     },
                     {
-                      "type": "FLIP",
-                      "faceDown": true
+                      "type": "FLIP"
                     },
                     {
-                      "type": "ITEM",
-                      "faceDown": true
+                      "type": "ITEM"
                     },
                     {
-                      "type": "STAGE",
-                      "faceDown": true
+                      "type": "STAGE"
                     },
                     {
-                      "type": "TRAP",
-                      "faceDown": true
+                      "type": "TRAP"
                     }
-                  ]
+                  ],
+                  "visibility": "noone"
                 }
               ]
             },
@@ -399,31 +389,26 @@
                   "allowedCardTypes": [
                     {
                       "type": "COOKIE",
-                      "discardTo": "trash",
-                      "faceDown": true
+                      "discardTo": "trash"
                     },
                     {
                       "type": "FLIP",
-                      "discardTo": "trash",
-                      "faceDown": true
+                      "discardTo": "trash"
                     },
                     {
                       "type": "ITEM",
                       "playTo": "stack",
-                      "discardTo": "trash",
-                      "faceDown": true
+                      "discardTo": "trash"
                     },
                     {
                       "type": "TRAP",
                       "playTo": "stack",
-                      "discardTo": "trash",
-                      "faceDown": true
+                      "discardTo": "trash"
                     },
                     {
                       "type": "STAGE",
                       "playTo": "stage",
-                      "discardTo": "trash",
-                      "faceDown": true
+                      "discardTo": "trash"
                     }
                   ]
                 }
@@ -442,34 +427,30 @@
                     {
                       "type": "COOKIE",
                       "playTo": "stack",
-                      "discardTo": "trash",
-                      "faceDown": true
+                      "discardTo": "trash"
                     },
                     {
                       "type": "FLIP",
                       "playTo": "stack",
-                      "discardTo": "trash",
-                      "faceDown": true
+                      "discardTo": "trash"
                     },
                     {
                       "type": "ITEM",
                       "playTo": "stack",
-                      "discardTo": "trash",
-                      "faceDown": true
+                      "discardTo": "trash"
                     },
                     {
                       "type": "TRAP",
                       "playTo": "stack",
-                      "discardTo": "trash",
-                      "faceDown": true
+                      "discardTo": "trash"
                     },
                     {
                       "type": "STAGE",
                       "playTo": "stage",
-                      "discardTo": "trash",
-                      "faceDown": true
+                      "discardTo": "trash"
                     }
-                  ]
+                  ],
+                  "faceDown": true
                 }
               ]
             },
@@ -478,7 +459,7 @@
               "zones": [
                 {
                   "id": "trash",
-                  "type": "PILE",
+                  "type": "DECK",
                   "name": "Trash",
                   "allowedCardTypes": [
                     {
@@ -504,7 +485,8 @@
                       "playTo": "stage",
                       "discardTo": "trash"
                     }
-                  ]
+                  ],
+                  "faceDown": false
                 }
               ]
             }
