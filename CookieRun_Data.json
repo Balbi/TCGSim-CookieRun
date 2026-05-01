@@ -200,6 +200,7 @@
                   "id": "break",
                   "type": "FIELD",
                   "name": "Break",
+                  "hideName": true,
                   "cardsDirection": "column",
                   "allowedCardTypes": [
                     {
@@ -222,6 +223,7 @@
                   "id": "cookie1",
                   "type": "SINGLE",
                   "name": "Cookie 1",
+                  "hideName": true,
                   "allowedCardTypes": [
                     {
                       "type": "COOKIE",
@@ -252,6 +254,7 @@
                   "id": "cookie2",
                   "type": "SINGLE",
                   "name": "Cookie 2",
+                  "hideName": true,
                   "allowedCardTypes": [
                     {
                       "type": "COOKIE",
@@ -288,6 +291,7 @@
                   "type": "FIELD",
                   "name": "Flip 1",
                   "justify": "center",
+                  "hideName": true,
                   "disablePreview": true,
                   "expand": true,
                   "allowedCardTypes": [
@@ -313,6 +317,7 @@
                   "id": "flip2",
                   "type": "FIELD",
                   "name": "Flip 2",
+                  "hideName": true,
                   "justify": "center",
                   "disablePreview": true,
                   "expand": true,
@@ -344,6 +349,7 @@
                   "id": "support",
                   "type": "FIELD",
                   "name": "Support",
+                  "hideName": true,
                   "expand": true,
                   "cardsDirection": "row",
                   "allowedCardTypes": [
@@ -386,6 +392,7 @@
                   "id": "stage",
                   "type": "SINGLE",
                   "name": "Stage",
+                  "hideName": true,
                   "allowedCardTypes": [
                     {
                       "type": "COOKIE",
@@ -422,6 +429,7 @@
                   "type": "DECK",
                   "drawTo": "hand",
                   "name": "Deck",
+                  "hideName": true,
                   "disablePreview": true,
                   "allowedCardTypes": [
                     {
@@ -461,6 +469,7 @@
                   "id": "trash",
                   "type": "DECK",
                   "name": "Trash",
+                  "hideName": true,
                   "allowedCardTypes": [
                     {
                       "type": "COOKIE",
@@ -497,6 +506,7 @@
         {
           "id": "hand",
           "name": "Hand",
+          "hideName": true,
           "expand": true,
           "allowedCardTypes": [
             {
